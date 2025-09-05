@@ -19,7 +19,7 @@
 
 </div>
 
-Game Tic Tac Toe (Java Swing + Socket)
+
 ## 1. Giới thiệu hệ thống
 
 Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – Server:
