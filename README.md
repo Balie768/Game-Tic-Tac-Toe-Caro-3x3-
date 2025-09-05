@@ -55,16 +55,16 @@ Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơ
     - Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
 
 ## 4. Cài đặt & chạy chương trình
-Bước 1: Chuẩn bị môi trường
+- Bước 1: Chuẩn bị môi trường
 Cài đặt Java JDK 8+.
 Kiểm tra bằng:
 java -version
-Bước 2: Biên dịch chương trình
+- Bước 2: Biên dịch chương trình
 javac server/*.java
 javac client/*.java
-Bước 3: Khởi chạy Server
+- Bước 3: Khởi chạy Server
 java server.ServerMain
-Bước 4: Khởi chạy Client
+- Bước 4: Khởi chạy Client
 Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
 
 java client.LoginFrame
@@ -72,7 +72,7 @@ java client.LoginFrame
 
 Nhập 127.0.0.1, 5000, và tên người chơi khác nhau.
 
-Bước 5: Chơi game
+- Bước 5: Chơi game
 
 Hai client kết nối thành công sẽ được ghép cặp.
 
