@@ -19,100 +19,99 @@
 
 </div>
 
-## 1. Giới thiệu hệ thống
-Hệ thống Quản lý Đặt vé Xem phim được xây dựng nhằm hỗ trợ người dùng dễ dàng đặt vé trực tuyến, tra cứu lịch chiếu và quản lý vé đã đặt.  
-Đối với quản trị viên, hệ thống cung cấp chức năng quản lý phim, suất chiếu, phòng chiếu và theo dõi doanh thu.  
+Game Tic Tac Toe (Java Swing + Socket)
+##1. Giới thiệu hệ thống
 
-**Các chức năng chính:**
-- Người dùng:
-  - Đăng ký / đăng nhập
-  - Xem danh sách phim, lịch chiếu
-  - Đặt vé xem phim, xem lại vé đã đặt
-- Quản trị viên:
-  - Quản lý phim
-  - Quản lý lịch chiếu, phòng chiếu
-  - Quản lý vé và doanh thu
+Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – Server:
 
----
+Client: ứng dụng giao diện đồ họa bằng Java Swing để người chơi thao tác.
 
-### 2.Ngôn ngữ & Công nghệ chính
-<div align="center">
-    
-[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
-[![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
 
-### Cơ sở dữ liệu
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+Chức năng chính
 
-### Môi trường chạy
-[![XAMPP](https://img.shields.io/badge/XAMPP-F37623?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/index.html)
+Đăng nhập/nhập tên để tham gia hệ thống.
 
-</div>
+Ghép cặp tự động giữa hai người chơi.
 
----
+Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
 
-## 3. Hình ảnh các chức năng
---- Chức năng đăng nhập ---
-<img width="1920" height="919" alt="image" src="https://github.com/user-attachments/assets/624c1ca9-52e0-4f97-b634-3cb68b79d5f1" />
---- Giao diện trang chủ ---
-<img width="1910" height="921" alt="image" src="https://github.com/user-attachments/assets/c020691e-cca0-47d2-be13-f6c8449e675b" />
---- Giao diện trang quản lý ---
-<img width="1920" height="923" alt="image" src="https://github.com/user-attachments/assets/e7554fab-9f6b-4150-8586-359cea51f592" />
---- Quản lý phim ---
-<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/27eefab0-d3a4-4d85-89c0-38508244bc92" />
---- Quản lý rạp chiếu ---
-<img width="1920" height="435" alt="image" src="https://github.com/user-attachments/assets/0de63dce-8d75-4207-9918-6d8c3cf1d933" />
---- Quản lý đặt vé ---
-<img width="1397" height="693" alt="image" src="https://github.com/user-attachments/assets/ffb80c7b-e0de-40f8-85da-8beaff2ecc72" />
+Xử lý tình huống thoát giữa chừng (người còn lại thắng).
 
+Lưu lịch sử trận đấu (người chơi, kết quả, bàn cờ cuối cùng) vào file matches.csv.
 
-## 🚀 4. Các project đã thực hiện dựa trên Platform
+##2. Công nghệ sử dụng
 
-Một số project sinh viên đã thực hiện:
-- #### [Khoá 15](./docs/projects/K15/README.md)
-- #### [Khoá 16]() (Coming soon)
-## 5. Các bước cài đặt
-1. **Cài đặt XAMPP**  
-   - Tải và cài XAMPP: [https://www.apachefriends.org](https://www.apachefriends.org)  
-   - Khởi động Apache và MySQL trong XAMPP Control Panel.  
+Ngôn ngữ lập trình: Java (JDK 8+).
 
-2. **Tạo cơ sở dữ liệu**  
-   - Mở [http://localhost/phpmyadmin](http://localhost/phpmyadmin)  
-   - Tạo database mới, ví dụ: `movie_booking`  
-   - Import file `db_movie.sql` trong thư mục dự án vào database vừa tạo.  
+Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
 
-3. **Copy source code vào thư mục htdocs**  
-   - Giải nén project vào:  
-     ```
-     C:\xampp\htdocs\project_movie_booking
-     ```  
+Truyền thông mạng: TCP Socket.
 
-4. **Cấu hình kết nối database**  
-   - Mở file `includes/db_connect.php` (hoặc file cấu hình kết nối)  
-   - Chỉnh sửa thông tin nếu cần:
-     ```php
-     $servername = "localhost";
-     $username   = "root";
-     $password   = "";
-     $dbname     = "movie_booking";
-     ```
+Lưu trữ dữ liệu: File CSV (matches.csv). Có thể mở rộng sang SQLite/JDBC.
 
-5. **Chạy hệ thống**  
-   - Mở trình duyệt và truy cập:  
-     ```
-     http://localhost/project_movie_booking
-     ```  
+Kiến trúc:
 
-6. **Tài khoản mẫu** (nếu có)  
-   - Admin: `admin / admin123`  
-   - User: `user / 123456`  
+Client: Swing + lớp NetworkClient quản lý socket.
 
----
+Server: ServerMain + ClientHandler + GameRoom + Storage.
+
+##3. Hình ảnh các chức năng
+
+Màn hình đăng nhập/kết nối
+
+Nhập Server, Port, Tên người chơi.
+
+Nút Kết nối & Chơi.
+
+Màn hình chơi game
+
+Bàn cờ 3x3 bằng các nút bấm.
+
+Hiển thị lượt chơi.
+
+Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
+
+Thông báo kết quả
+
+Cửa sổ popup hiển thị kết quả trận đấu.
+
+File lưu trữ (matches.csv)
+
+Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
+
+##4. Cài đặt & chạy chương trình
+Bước 1: Chuẩn bị môi trường
+
+Cài đặt Java JDK 8+.
+
+Kiểm tra bằng:
+
+java -version
+
+Bước 2: Biên dịch chương trình
+javac server/*.java
+javac client/*.java
+
+Bước 3: Khởi chạy Server
+java server.ServerMain
+
+Bước 4: Khởi chạy Client
+
+Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
+
+java client.LoginFrame
 
 
-📌 *Lưu ý: Có thể tùy chỉnh tên database, tài khoản admin, giao diện theo nhu cầu.*
+Nhập 127.0.0.1, 5000, và tên người chơi khác nhau.
+
+Bước 5: Chơi game
+
+Hai client kết nối thành công sẽ được ghép cặp.
+
+Người chơi lần lượt đánh X/O trên giao diện.
+
+Khi kết thúc, kết quả hiển thị và được lưu tại file matches.csv.
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
