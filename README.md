@@ -20,60 +20,35 @@
 </div>
 
 Game Tic Tac Toe (Java Swing + Socket)
-##1. Giới thiệu hệ thống
+## 1. Giới thiệu hệ thống
 
 Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – Server:
-
 Client: ứng dụng giao diện đồ họa bằng Java Swing để người chơi thao tác.
-
 Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
-
-Chức năng chính
-
-Đăng nhập/nhập tên để tham gia hệ thống.
-
-Ghép cặp tự động giữa hai người chơi.
-
-Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
-
-Xử lý tình huống thoát giữa chừng (người còn lại thắng).
-
-Lưu lịch sử trận đấu (người chơi, kết quả, bàn cờ cuối cùng) vào file matches.csv.
+** Chức năng chính **
+- Đăng nhập/nhập tên để tham gia hệ thống.
+- Ghép cặp tự động giữa hai người chơi.
+- Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
+- Xử lý tình huống thoát giữa chừng (người còn lại thắng).
+- Lưu lịch sử trận đấu (người chơi, kết quả, bàn cờ cuối cùng) vào file matches.csv.
 
 ##2. Công nghệ sử dụng
-
-Ngôn ngữ lập trình: Java (JDK 8+).
-
-Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
-
-Truyền thông mạng: TCP Socket.
-
-Lưu trữ dữ liệu: File CSV (matches.csv). Có thể mở rộng sang SQLite/JDBC.
-
-Kiến trúc:
-
-Client: Swing + lớp NetworkClient quản lý socket.
-
-Server: ServerMain + ClientHandler + GameRoom + Storage.
-
+- Ngôn ngữ lập trình: Java (JDK 8+).
+- Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
+- Truyền thông mạng: TCP Socket.
+- Lưu trữ dữ liệu: File CSV (matches.csv). Có thể mở rộng sang SQLite/JDBC.
+- Kiến trúc:
+    - Client: Swing + lớp NetworkClient quản lý socket.
+    - Server: ServerMain + ClientHandler + GameRoom + Storage.
 ##3. Hình ảnh các chức năng
-
 Màn hình đăng nhập/kết nối
-
 Nhập Server, Port, Tên người chơi.
-
 Nút Kết nối & Chơi.
-
 Màn hình chơi game
-
 Bàn cờ 3x3 bằng các nút bấm.
-
 Hiển thị lượt chơi.
-
 Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
-
 Thông báo kết quả
-
 Cửa sổ popup hiển thị kết quả trận đấu.
 
 File lưu trữ (matches.csv)
