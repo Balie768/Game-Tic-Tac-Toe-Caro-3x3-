@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   GAME TIC TAC TOE (Caro 3x3)
+   GAME TIC TAC TOE (CARO 3x3)
 </h2>
 <div align="center">
     <p align="center">
@@ -37,7 +37,7 @@ Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơ
 - Ngôn ngữ lập trình: Java (JDK 8+).
 - Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
 - Truyền thông mạng: TCP Socket.
-- Lưu trữ dữ liệu: File CSV (matches.csv). Có thể mở rộng sang SQLite/JDBC.
+- Lưu trữ dữ liệu: File CSV (matches.csv).
 - Kiến trúc:
     - Client: Swing + lớp NetworkClient quản lý socket.
     - Server: ServerMain + ClientHandler + GameRoom + Storage.
@@ -45,38 +45,46 @@ Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơ
 - Màn hình đăng nhập/kết nối
     - Nhập Tên người chơi.
     - Nút Kết nối & Chơi.
+    - 
   <p align="center">
   <img src="docs/nhapten.png" alt="Ảnh 1" width="500"/>
 </p>
 <p align="center">
   <em> Hình 1: Nhập tên sau khi chạy client </em>
 </p>
+
 - Màn hình chơi game
     - Bàn cờ 3x3 bằng các nút bấm.
     - Hiển thị lượt chơi.
     - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
+      
 <p align="center">
   <img src="docs/choi.png" alt="Ảnh 2" width="500"/>
 </p>
 <p align="center">
   <em> Hình 2: Ghép phòng 2 người để chơi </em>
 </p>
+
 - Thông báo kết quả
     - Cửa sổ popup hiển thị kết quả trận đấu.
+      
 <p align="center">
   <img src="docs/kq.png" alt="Ảnh 3" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 2: Kết quả trận đấu </em>
+  <em> Hình 3: Kết quả trận đấu </em>
 </p>
+
 - File lưu trữ (matches.csv)
-    - Lưu: roomId, playerX, playerO, kết quả.
+    - Lưu: playerX, playerO, kết quả.
+      
 <p align="center">
   <img src="docs/data.png" alt="Ảnh 4" width="500"/>
 </p>
 <p align="center">
   <em> Hình 4: Data trận đấu </em>
 </p>
+
 ## 4. Cài đặt & chạy chương trình
 - Bước 1: Chuẩn bị môi trường
     - Cài đặt Java JDK 8+.
