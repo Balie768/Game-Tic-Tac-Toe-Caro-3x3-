@@ -105,6 +105,10 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
     - Người chơi lần lượt đánh X/O trên giao diện.
     - Khi kết thúc, kết quả hiển thị và được lưu tại file matches.csv.
 
+sửa x màu đen, o màu đỏ
+sửa tên khi win, lose VD : Hi win, ho lose
+sửa ai xem ls chơi của người đó 
+
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
