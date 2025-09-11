@@ -45,7 +45,7 @@ Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơ
 - Màn hình đăng nhập/kết nối
     - Nhập Tên người chơi.
     - Nút Kết nối & Chơi.
-    - 
+      
   <p align="center">
   <img src="docs/nhapten.png" alt="Ảnh 1" width="500"/>
 </p>
