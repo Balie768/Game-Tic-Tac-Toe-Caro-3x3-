@@ -23,8 +23,9 @@
 ## 1. Giới thiệu hệ thống
 
 Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – Server:
-Client: ứng dụng giao diện đồ họa bằng Java Swing để người chơi thao tác.
-Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
+
+- Client: ứng dụng giao diện đồ họa bằng Java Swing để người chơi thao tác.
+- Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
 
 ** Chức năng chính **
 - Đăng nhập/nhập tên để tham gia hệ thống.
