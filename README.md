@@ -43,7 +43,7 @@ Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơ
     - Server: ServerMain + ClientHandler + GameRoom + Storage.
 ## 3. Hình ảnh các chức năng
 - Màn hình đăng nhập/kết nối
-    - Nhập Server, Port, Tên người chơi.
+    - Nhập Tên người chơi.
     - Nút Kết nối & Chơi.
 - Màn hình chơi game
     - Bàn cờ 3x3 bằng các nút bấm.
