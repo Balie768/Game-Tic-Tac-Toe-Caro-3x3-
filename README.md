@@ -38,7 +38,6 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Ngôn ngữ lập trình: Java (JDK 8+).
 - Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
 - Truyền thông mạng: TCP Socket.
-- Lưu trữ dữ liệu: File CSV (matches.csv).
 - Kiến trúc:
     - Client: Swing + lớp NetworkClient quản lý socket.
     - Server: ServerMain + ClientHandler + GameRoom + Storage.
