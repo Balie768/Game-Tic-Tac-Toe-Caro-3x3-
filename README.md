@@ -70,7 +70,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
     - Cửa sổ popup hiển thị kết quả trận đấu.
       
 <p align="center">
-  <img src="docs/kq.png" alt="Ảnh 3" width="500"/>
+  <img src="docs/kq.jpg" alt="Ảnh 3" width="500"/>
 </p>
 <p align="center">
   <em> Hình 3: Kết quả trận đấu </em>
