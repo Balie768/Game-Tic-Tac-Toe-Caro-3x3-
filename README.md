@@ -75,7 +75,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
   <em> Hình 3: Kết quả trận đấu </em>
 </p>
 
-- File lưu trữ (matches.csv)
+- File lưu trữ 
     - Lưu: playerX, playerO, kết quả.
       
 <p align="center">
