@@ -32,79 +32,12 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Ghép cặp tự động giữa hai người chơi.
 - Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
 - Xử lý tình huống thoát giữa chừng (người còn lại thắng).
-- Lưu lịch sử trận đấu (người chơi, kết quả, bàn cờ cuối cùng) vào file matches.csv.
+- Lưu lịch sử trận đấu (người lại.
 
-## 2. Công nghệ sử dụng
-- Ngôn ngữ lập trình: Java (JDK 8+).
-- Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel).
-- Truyền thông mạng: TCP Socket.
-- Kiến trúc:
-    - Client: Swing + lớp NetworkClient quản lý socket.
-    - Server: ServerMain + ClientHandler + GameRoom + Storage.
-## 3. Hình ảnh các chức năng
-- Màn hình đăng nhập/kết nối
-    - Nhập Tên người chơi.
-    - Nút Kết nối & Chơi.
-      
-  <p align="center">
-  <img src="docs/nhapten.png" alt="Ảnh 1" width="500"/>
-</p>
-<p align="center">
-  <em> Hình 1: Nhập tên sau khi chạy client </em>
-</p>
-
-- Màn hình chơi game
-    - Bàn cờ 3x3 bằng các nút bấm.
-    - Hiển thị lượt chơi.
-    - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
-      
-<p align="center">
-  <img src="docs/choi.png" alt="Ảnh 2" width="500"/>
-</p>
-<p align="center">
-  <em> Hình 2: Ghép phòng 2 người để chơi </em>
-</p>
-
-- Thông báo kết quả
-    - Cửa sổ popup hiển thị kết quả trận đấu.
-      
-<p align="center">
-  <img src="docs/kq.jpg" alt="Ảnh 3" width="500"/>
-</p>
-<p align="center">
-  <em> Hình 3: Kết quả trận đấu </em>
-</p>
-
-- File lưu trữ 
-    - Lưu: playerX, playerO, kết quả.
-      
-<p align="center">
-  <img src="docs/data.png" alt="Ảnh 4" width="500"/>
-</p>
-<p align="center">
-  <em> Hình 4: Data trận đấu </em>
-</p>
-
-## 4. Cài đặt & chạy chương trình
-- Bước 1: Chuẩn bị môi trường
-    - Cài đặt Java JDK 8+.
-    - Kiểm tra bằng:
-    java -version
-- Bước 2: Biên dịch chương trình
-    - javac server/*.java
-    - javac client/*.java
-- Bước 3: Khởi chạy Server
-    - java server.ServerMain
-- Bước 4: Khởi chạy Client
-    - Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
-    - java client.LoginFrame
-    - Nhập tên người chơi khác nhau.
-- Bước 5: Chơi game
-    - Hai client kết nối thành công sẽ được ghép cặp.
-    - Người chơi lần lượt đánh X/O trên giao diện.
-    - Khi kết thúc, kết quả hiển thị và được lưu tại file matches.csv.
-
-
+## Thông tin liên hệ  
+Họ tên: Nguyễn Thị Kiều Hoa.  
+Lớp: CNTT 16-03.  
+Email: ngochoa061204@gmail.com.
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
