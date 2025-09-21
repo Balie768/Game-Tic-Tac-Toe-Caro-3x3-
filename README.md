@@ -44,28 +44,35 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Màn hình đăng nhập/kết nối
     - Nhập Server, Port, Tên người chơi.
     - Nút Kết nối & Chơi.
-    
-- Màn hình chơi game
-    - Bàn cờ 3x3 bằng các nút bấm.
-    - Hiển thị lượt chơi.
-    - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
-      <p align="center">
-  <img src="images/nhapten.png" alt="Ảnh 1" width="500"/>
+     <img src="images/nhapten.png" alt="Ảnh 1" width="500"/>
 </p>
 <p align="center">
   <em>Hình 1: Nhập tên sau khi chạy client</em>
 </p>
 
+- Màn hình chơi game
+    - Bàn cờ 3x3 bằng các nút bấm.
+    - Hiển thị lượt chơi.
+    - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
+
+  <img src="images/choi.png" alt="Ảnh 2" width="500"/>
+</p>
+<p align="center">
+  <em>Hình 2: Ghép phòng 2 người chơi</em>
+</p>
+
 - Thông báo kết quả
     - Cửa sổ popup hiển thị kết quả trận đấu.
       <p align="center">
+      
   <img src="images/kq.png" alt="Ảnh 3" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 3: Nhập tên sau khi chạy client </em>
+  <em> Hình 3: Kêt quả trận đấu </em>
 </p>
-- File lưu trữ (matches.csv)
-    - Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
+
+ - Lưu: Xem lịch sử trận đấu
+    
     <p align="center">
   <img src="images/lsd.png" alt="Ảnh 4" width="500"/>
 </p>
