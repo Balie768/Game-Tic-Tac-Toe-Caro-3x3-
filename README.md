@@ -53,6 +53,20 @@ Cửa sổ popup hiển thị kết quả trận đấu.
 File lưu trữ (matches.csv)
 Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
 
+## 3. Hình ảnh các chức năng
+- Màn hình đăng nhập/kết nối
+    - Nhập Server, Port, Tên người chơi.
+    - Nút Kết nối & Chơi.
+    - 
+- Màn hình chơi game
+    - Bàn cờ 3x3 bằng các nút bấm.
+    - Hiển thị lượt chơi.
+    - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
+- Thông báo kết quả
+    - Cửa sổ popup hiển thị kết quả trận đấu.
+- File lưu trữ (matches.csv)
+    - Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
+
 ## 4. Cài đặt & chạy chương trình
 Bước 1: Chuẩn bị môi trường
 Cài đặt Java JDK 8+.
