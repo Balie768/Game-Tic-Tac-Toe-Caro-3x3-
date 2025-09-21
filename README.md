@@ -69,7 +69,7 @@ Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng
     - Hiển thị lượt chơi.
     - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
       <p align="center">
-  <img src="docs/nhapten.png" alt="Ảnh 2" width="500"/>
+  <img src="docs/choi.png" alt="Ảnh 2" width="500"/>
 </p>
 <p align="center">
   <em> Hình 2: Nhập tên sau khi chạy client </em>
@@ -78,7 +78,7 @@ Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng
 - Thông báo kết quả
     - Cửa sổ popup hiển thị kết quả trận đấu.
       <p align="center">
-  <img src="docs/kq.png" alt="Ảnh 3" width="500"/>
+  <img src="docs/kq.jpg" alt="Ảnh 3" width="500"/>
 </p>
 <p align="center">
   <em> Hình 3: Nhập tên sau khi chạy client </em>
@@ -86,28 +86,34 @@ Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng
 - File lưu trữ (matches.csv)
     - Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
     <p align="center">
-  <img src="docs/nhapten.png" alt="Ảnh 4" width="500"/>
+  <img src="docs/data.png" alt="Ảnh 4" width="500"/>
 </p>
 <p align="center">
   <em> Hình 4: Lịch sử đấu </em>
 </p>
+
 ## 4. Cài đặt & chạy chương trình
-Bước 1: Chuẩn bị môi trường
+- Bước 1: Chuẩn bị môi trường
 Cài đặt Java JDK 8+.
 Kiểm tra bằng: java -version
-Bước 2: Biên dịch chương trình
+
+- Bước 2: Biên dịch chương trình
 javac server/*.java
 javac client/*.java
-Bước 3: Khởi chạy Server
+
+- Bước 3: Khởi chạy Server
 java server.ServerMain
-Bước 4: Khởi chạy Client
+
+- Bước 4: Khởi chạy Client
 Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
 java client.LoginFrame
 Nhập 127.0.0.1, 5000, và tên người chơi khác nhau.
-Bước 5: Chơi game
+
+- Bước 5: Chơi game
 Hai client kết nối thành công sẽ được ghép cặp.
 Người chơi lần lượt đánh X/O trên giao diện.
-Khi kết thúc, kết quả hiển thị và được lưu tại file matches.csv.
+Khi kết thúc, kết quả hiển thị và lưu lại lịch sử đấu.
+
 ## Thông tin liên hệ  
 Họ tên: Nguyễn Thị Kiều Hoa.  
 Lớp: CNTT 16-03.  
