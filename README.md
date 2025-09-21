@@ -88,25 +88,25 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 
 ## 4. Cài đặt & chạy chương trình
 - Bước 1: Chuẩn bị môi trường
-Cài đặt Java JDK 8+.
-Kiểm tra bằng: java -version
+    - Cài đặt Java JDK 8+.
+    - Kiểm tra bằng: java -version
 
 - Bước 2: Biên dịch chương trình
-javac server/*.java
-javac client/*.java
+    - javac server/*.java
+    - javac client/*.java
 
 - Bước 3: Khởi chạy Server
-java server.ServerMain
+    - java server.ServerMain
 
 - Bước 4: Khởi chạy Client
-Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
-java client.LoginFrame
-Nhập 127.0.0.1, 5000, và tên người chơi khác nhau.
+    - Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
+    - java client.LoginFrame
+    - Nhập tên người chơi khác nhau.
 
 - Bước 5: Chơi game
-Hai client kết nối thành công sẽ được ghép cặp.
-Người chơi lần lượt đánh X/O trên giao diện.
-Khi kết thúc, kết quả hiển thị và lưu lại lịch sử đấu.
+    - Hai client kết nối thành công sẽ được ghép cặp.
+    - Người chơi lần lượt đánh X/O trên giao diện.
+    - Khi kết thúc, kết quả hiển thị và lưu lại lịch sử đấu.
 
 ## Thông tin liên hệ  
 Họ tên: Nguyễn Thị Kiều Hoa.  
