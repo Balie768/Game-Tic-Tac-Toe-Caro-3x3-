@@ -47,7 +47,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
       <p align="center">
   <img src="images/nhapten.png" alt="Ảnh 1" width="500"/>
 </p>
-<p align="center">
+    <p align="center">
   <em> Hình 1: Nhập tên sau khi chạy client </em>
 </p>
 
