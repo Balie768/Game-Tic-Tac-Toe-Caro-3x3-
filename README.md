@@ -8,9 +8,9 @@
 </h2>
 <div align="center">
     <p align="center">
-        <img src="docs/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="docs/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="docs/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+        <img src="images/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+        <img src="images/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
+        <img src="images/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
@@ -59,7 +59,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
     - Hiển thị lượt chơi.
     - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
       <p align="center">
-  <img src="docs/choi.png" alt="Ảnh 2" width="500"/>
+  <img src="images/choi.png" alt="Ảnh 2" width="500"/>
 </p>
 <p align="center">
   <em> Hình 2: Nhập tên sau khi chạy client </em>
@@ -68,7 +68,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Thông báo kết quả
     - Cửa sổ popup hiển thị kết quả trận đấu.
       <p align="center">
-  <img src="docs/kq.jpg" alt="Ảnh 3" width="500"/>
+  <img src="images/kq.jpg" alt="Ảnh 3" width="500"/>
 </p>
 <p align="center">
   <em> Hình 3: Nhập tên sau khi chạy client </em>
@@ -76,7 +76,7 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - File lưu trữ (matches.csv)
     - Lưu: thời gian, roomId, playerX, playerO, kết quả, bàn cờ cuối cùng.
     <p align="center">
-  <img src="docs/data.png" alt="Ảnh 4" width="500"/>
+  <img src="images/lsd.png" alt="Ảnh 4" width="500"/>
 </p>
 <p align="center">
   <em> Hình 4: Lịch sử đấu </em>
