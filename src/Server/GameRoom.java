@@ -1,73 +1,93 @@
 package Server;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 
-public class GameRoom extends Thread {
-    private ClientHandler playerX;
-    private ClientHandler playerO;
-    private char[][] board = new char[3][3];
-    private char currentTurn = 'X';
+public class GameRoom implements Runnable {
+    private Socket p1, p2;
+    private BufferedReader in1, in2;
+    private PrintWriter out1, out2;
+    private String name1, name2;
+    private String[][] board = new String[3][3];
+    private boolean turnX = true;
 
-    public GameRoom(ClientHandler p1, ClientHandler p2) {
-        this.playerX = p1;
-        this.playerO = p2;
-    }
-
-    @Override
-    public void run() {
+    public GameRoom(Socket p1, Socket p2, String name1, String name2) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.name1 = name1;
+        this.name2 = name2;
         try {
-            playerX.send("Start X " + playerO.getPlayerName());
-            playerO.send("Start O " + playerX.getPlayerName());
-
-            while (true) {
-                ClientHandler current = (currentTurn == 'X') ? playerX : playerO;
-                ClientHandler opponent = (currentTurn == 'X') ? playerO : playerX;
-
-                current.send("YourMove");
-                String move = current.receive();
-                if (move == null) break;
-
-                String[] parts = move.split(",");
-                int r = Integer.parseInt(parts[0]);
-                int c = Integer.parseInt(parts[1]);
-
-                if (board[r][c] == '\0') {
-                    board[r][c] = currentTurn;
-                    current.send("ValidMove " + r + "," + c);
-                    opponent.send("OpponentMove " + r + "," + c);
-
-                    if (checkWin(currentTurn)) {
-                        current.send("Win");
-                        opponent.send("Lose");
-                        Storage.saveMatch(playerX.getPlayerName(), playerO.getPlayerName(), currentTurn);
-                        break;
-                    } else if (isDraw()) {
-                        current.send("Draw");
-                        opponent.send("Draw");
-                        Storage.saveMatch(playerX.getPlayerName(), playerO.getPlayerName(), 'D');
-                        break;
-                    }
-                    currentTurn = (currentTurn == 'X') ? 'O' : 'X';
-                }
-            }
+            in1 = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+            in2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
+            out1 = new PrintWriter(p1.getOutputStream(), true);
+            out2 = new PrintWriter(p2.getOutputStream(), true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private boolean checkWin(char p) {
-        for (int i = 0; i < 3; i++) {
-            if (board[i][0] == p && board[i][1] == p && board[i][2] == p) return true;
-            if (board[0][i] == p && board[1][i] == p && board[2][i] == p) return true;
+    public void run() {
+        out1.println("Start X");
+        out2.println("Start O");
+
+        try {
+            while (true) {
+                String msg1 = in1.readLine();
+                if (msg1 != null) handleMessage(msg1, out1, out2, "X");
+                String msg2 = in2.readLine();
+                if (msg2 != null) handleMessage(msg2, out2, out1, "O");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return (board[0][0] == p && board[1][1] == p && board[2][2] == p) ||
-               (board[0][2] == p && board[1][1] == p && board[2][0] == p);
     }
 
-    private boolean isDraw() {
+    private void handleMessage(String msg, PrintWriter outCur, PrintWriter outOpp, String role) {
+        try {
+            if (msg.startsWith("MOVE:")) {
+                String[] parts = msg.substring(5).split(",");
+                int r = Integer.parseInt(parts[0]), c = Integer.parseInt(parts[1]);
+                if (board[r][c] == null) {
+                    board[r][c] = role;
+                    outCur.println("ValidMove " + r + "," + c);
+                    outOpp.println("OpponentMove " + r + "," + c);
+                    if (checkWin(role)) {
+                        String winnerName = role.equals("X") ? name1 : name2;
+                        String loserName = role.equals("X") ? name2 : name1;
+                        outCur.println("Win:" + winnerName);
+                        outOpp.println("Lose:" + loserName);
+                        MatchHistory.addMatch(name1, name2, winnerName);
+                    } else if (isBoardFull()) {
+                        outCur.println("Draw");
+                        outOpp.println("Draw");
+                        MatchHistory.addMatch(name1, name2, "Hòa");
+                    }
+                }
+            } else if (msg.equals("RESET")) {
+                board = new String[3][3];
+                outCur.println("ResetBoard");
+                outOpp.println("ResetBoard");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean checkWin(String role) {
+        for (int i = 0; i < 3; i++)
+            if (role.equals(board[i][0]) && role.equals(board[i][1]) && role.equals(board[i][2]))
+                return true;
+        for (int j = 0; j < 3; j++)
+            if (role.equals(board[0][j]) && role.equals(board[1][j]) && role.equals(board[2][j]))
+                return true;
+        return role.equals(board[0][0]) && role.equals(board[1][1]) && role.equals(board[2][2])
+            || role.equals(board[0][2]) && role.equals(board[1][1]) && role.equals(board[2][0]);
+    }
+
+    private boolean isBoardFull() {
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
-                if (board[i][j] == '\0') return false;
+                if (board[i][j] == null) return false;
         return true;
     }
 }
