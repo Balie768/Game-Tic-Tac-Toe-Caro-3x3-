@@ -42,8 +42,8 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 
 ## 3. Hình ảnh các chức năng
 - Màn hình đăng nhập/kết nối
-    - Nhập Server, Port, Tên người chơi.
-    - Nút Kết nối & Chơi.
+    - Nhập Tên người chơi.
+    - Nút Kết nối.
     <p align="center">
      <img src="images/nhapten.png" alt="Ảnh 1" width="500"/>
     </p>
