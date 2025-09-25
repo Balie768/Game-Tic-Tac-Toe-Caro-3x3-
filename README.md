@@ -32,8 +32,8 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Ghép cặp tự động giữa hai người chơi.
 - Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
 - Xử lý tình huống thoát giữa chừng (người còn lại thắng).
-- Lưu lịch sử trận đấu (người lại.
-- 
+- Lưu lịch sử trận đấu.
+  
 ## 2. Công nghệ sử dụng
 [![Java](https://img.shields.io/badge/Java%20JDK-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 [![Swing](https://img.shields.io/badge/Java%20Swing-5382a1?style=for-the-badge&logo=coffeescript&logoColor=white)](https://docs.oracle.com/javase/tutorial/uiswing/)
