@@ -91,6 +91,7 @@ Hệ thống hỗ trợ đăng ký, đăng nhập, ghép cặp tự động, thi
 <p align="center"> <img src="docs/images/kq.png" alt="Ảnh 4" width="500"/> </p> <p align="center"> <em>Hình 4: Giao diện kết thúc game</em> </p>
 <p align="center"> <img src="docs/images/lsd.png" alt="Ảnh 5" width="500"/> </p> <p align="center"> <em>Hình 5: Giao diện lịch sử đấu</em> </p>
 <p align="center"> <img src="docs/images/bxh.png" alt="Ảnh 6" width="500"/> </p> <p align="center"> <em>Hình 6: Giao diện bảng xếp hạng</em> </p>
+
 ## 4. Cài đặt & chạy chương trình
 🔧 Bước 1: Chuẩn bị môi trường
 
