@@ -8,9 +8,9 @@
 </h2>
 <div align="center">
     <p align="center">
-        <img src="images/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="images/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="images/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+        <img src="docs/images/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+        <img src="docs/images/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
+        <img src="docs/images/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
@@ -28,11 +28,56 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 - Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
 
 ** Chức năng chính **
-- Đăng nhập/nhập tên để tham gia hệ thống.
-- Ghép cặp tự động giữa hai người chơi.
-- Chơi Tic Tac Toe online với luật chuẩn (X/O, thắng, thua, hòa).
-- Xử lý tình huống thoát giữa chừng (người còn lại thắng).
-- Lưu lịch sử trận đấu.
+
+🟦 Đăng ký tài khoản
+
+- Tạo username + password mới.
+
+- Kiểm tra trùng lặp username.
+
+- Lưu thông tin vào file accounts.txt.
+
+🟦 Đăng nhập hệ thống
+
+- Kiểm tra tài khoản từ server.
+
+- Tự động đưa người chơi vào hàng chờ để ghép cặp.
+
+🟦 Ghép cặp tự động
+
+- Server luôn theo dõi danh sách người chơi đang chờ.
+
+- Khi đủ 2 người → tạo phòng GameRoom mới và bắt đầu ván đấu.
+
+🟦 Chơi Tic Tac Toe online
+
+- Hai người chơi tương ứng quân X và O.
+
+- Giao thức TCP đảm bảo đồng bộ:
+
+    - Nước đi hợp lệ
+
+    - Lượt chơi
+
+    - Kết quả trận đấu
+
+    - Trạng thái bảng cờ
+
+🟦 Bộ đếm thời gian 30 giây mỗi lượt
+
+- Nếu hết thời gian → mất lượt → server điều khiển phiên tiếp theo.
+
+🟦 Lưu lịch sử & kết quả
+
+- Mỗi trận đấu được ghi lại: người chơi 1, người chơi 2, người thắng.
+
+- Hiển thị lịch sử khi người chơi yêu cầu.
+
+🟦 Bảng xếp hạng
+
+- Sắp xếp theo số trận thắng giảm dần.
+
+- Thống kê đầy đủ: thắng – thua – hòa – tổng số trận
   
 ## 2. Công nghệ sử dụng
 [![Java](https://img.shields.io/badge/Java%20JDK-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
@@ -41,72 +86,122 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 [![Architecture](https://img.shields.io/badge/Architecture-Server%20%2B%20Client-6db33f?style=for-the-badge&logo=databricks&logoColor=white)](#)
 
 ## 3. Hình ảnh các chức năng
-- Màn hình đăng nhập/kết nối
-    - Nhập Tên người chơi.
-    - Nút Kết nối.
+
     <p align="center">
-     <img src="images/ten.png" alt="Ảnh 1" width="500"/>
+     <img src="docs/images/dang nhap.png" alt="Ảnh 1" width="500"/>
     </p>
 
     <p align="center">
-    <em>Hình 1: Nhập tên sau khi chạy client</em>
+    <em>Hình 1: Giao diện đăng nhập</em>
     </p>
-
-- Màn hình chơi game
-    - Bàn cờ 3x3 bằng các nút bấm.
-    - Hiển thị lượt chơi.
-    - Khi có kết quả, hệ thống thông báo thắng/thua/hòa.
+-
       
     <p align="center">
-      <img src="images/choi.png" alt="Ảnh 2" width="500"/>
+      <img src="docs/images/dang ky.png" alt="Ảnh 2" width="500"/>
     </p>
     <p align="center">
     
-      <em>Hình 2: Ghép phòng 2 người chơi</em>
+      <em>Hình 2:Giao diện đăng ký</em>
     </p>
-
-- Thông báo kết quả
-    - Cửa sổ popup hiển thị kết quả trận đấu.
       
       <p align="center">
-      <img src="images/kq.png" alt="Ảnh 3" width="500"/>
+      <img src="docs/images/giao dien.png" alt="Ảnh 3" width="500"/>
         </p>
         
     <p align="center">
-      <em> Hình 3: Kêt quả trận đấu </em>
+      <em> Hình 3: Giao diện Game Caro 3x3 </em>
     </p>
     
-- Xem lịch sử trận đấu
-    
     <p align="center">
-  <img src="images/lsd.png" alt="Ảnh 4" width="500"/>
+  <img src="docs/images/kq.png" alt="Ảnh 4" width="500"/>
     </p>
 
     <p align="center">
-      <em> Hình 4: Lịch sử đấu </em>
+      <em> Giao diện kết thúc game </em>
     </p>
 
+     <p align="center">
+  <img src="docs/images/lsd.png" alt="Ảnh 5" width="500"/>
+    </p>
+
+    <p align="center">
+      <em> Giao diện lịch sử đấu </em>
+    </p>
+
+     <p align="center">
+  <img src="docs/images/bxh.png" alt="Ảnh 6" width="500"/>
+    </p>
+
+    <p align="center">
+      <em> Giao diện bảng xếp hạng </em>
+    </p>
 ## 4. Cài đặt & chạy chương trình
-- Bước 1: Chuẩn bị môi trường
-    - Cài đặt Java JDK 8+.
-    - Kiểm tra bằng: java -version
+🔧 Bước 1: Chuẩn bị môi trường
 
-- Bước 2: Biên dịch chương trình
-    - javac server/*.java
-    - javac client/*.java
+Cài đặt:
 
-- Bước 3: Khởi chạy Server
-    - java server.ServerMain
+- Java JDK 8 trở lên
 
-- Bước 4: Khởi chạy Client
-    - Mở 2 terminal khác nhau để mô phỏng 2 người chơi, mỗi bên chạy:
-    - java client.LoginFrame
-    - Nhập tên người chơi khác nhau.
+- IDE bất kỳ: IntelliJ IDEA, Eclipse, NetBeans
 
-- Bước 5: Chơi game
-    - Hai client kết nối thành công sẽ được ghép cặp.
-    - Người chơi lần lượt đánh X/O trên giao diện.
-    - Khi kết thúc, kết quả hiển thị và lưu lại lịch sử đấu.
+🔧 Bước 2: Tải project
+
+Clone hoặc tải source code:
+
+git clone <repository-url>
+
+🔧 Bước 3: Chạy server
+
+Vào thư mục:
+
+Server/ServerMain.java
+
+
+Bấm Run, nếu thành công sẽ xuất hiện:
+
+Server started...
+
+🔧 Bước 4: Chạy client
+
+Chạy file:
+
+Client/LoginFrame.java
+
+
+Mỗi lần chạy = 1 client.
+Chạy 2 client để test 2 người chơi.
+
+🔧 Bước 5: Đăng ký ➝ đăng nhập ➝ vào game
+
+1. Đăng ký tài khoản
+
+2. Đăng nhập
+
+3. Tự động ghép cặp với người chơi khác
+
+4. Ván đấu bắt đầu
+
+🔧 Bước 6: Chơi game
+
+- Người chơi “X” luôn đi trước.
+
+- Mỗi lượt có 30 giây.
+
+- Kết thúc bằng:
+
+    - Thắng
+
+    - Thua
+
+    - Hòa
+
+🔧 Bước 7: Xem lịch sử & bảng xếp hạng
+
+Ngay trong GameFrame → chọn:
+
+- “Lịch sử đấu”
+
+- “Bảng xếp hạng”
 
 ## Thông tin liên hệ  
 Họ tên: Nguyễn Thị Kiều Hoa.  
