@@ -22,10 +22,8 @@
 
 ## 1. Giới thiệu hệ thống
 
-Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – Server:
-
-- Client: ứng dụng giao diện đồ họa bằng Java Swing để người chơi thao tác.
-- Server: quản lý kết nối, ghép cặp người chơi, xử lý luật chơi và lưu trữ lịch sử trận đấu.
+Ứng dụng Tic Tac Toe 3x3 được xây dựng theo mô hình Client–Server, sử dụng giao thức TCP để kết nối người chơi và đồng bộ ván đấu theo thời gian thực.
+Hệ thống hỗ trợ đăng ký, đăng nhập, ghép cặp tự động, thi đấu online, ghi nhận lịch sử trận đấu và hiển thị bảng xếp hạng.
 
 ** Chức năng chính **
 
