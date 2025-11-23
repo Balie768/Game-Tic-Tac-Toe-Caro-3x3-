@@ -87,54 +87,12 @@ Hệ thống Game Tic Tac Toe được phát triển theo mô hình Client – S
 
 ## 3. Hình ảnh các chức năng
 
-    <p align="center">
-     <img src="docs/images/dang nhap.png" alt="Ảnh 1" width="500"/>
-    </p>
-
-    <p align="center">
-    <em>Hình 1: Giao diện đăng nhập</em>
-    </p>
--
-      
-    <p align="center">
-      <img src="docs/images/dang ky.png" alt="Ảnh 2" width="500"/>
-    </p>
-    <p align="center">
-    
-      <em>Hình 2:Giao diện đăng ký</em>
-    </p>
-      
-      <p align="center">
-      <img src="docs/images/giao dien.png" alt="Ảnh 3" width="500"/>
-        </p>
-        
-    <p align="center">
-      <em> Hình 3: Giao diện Game Caro 3x3 </em>
-    </p>
-    
-    <p align="center">
-  <img src="docs/images/kq.png" alt="Ảnh 4" width="500"/>
-    </p>
-
-    <p align="center">
-      <em> Giao diện kết thúc game </em>
-    </p>
-
-     <p align="center">
-  <img src="docs/images/lsd.png" alt="Ảnh 5" width="500"/>
-    </p>
-
-    <p align="center">
-      <em> Giao diện lịch sử đấu </em>
-    </p>
-
-     <p align="center">
-  <img src="docs/images/bxh.png" alt="Ảnh 6" width="500"/>
-    </p>
-
-    <p align="center">
-      <em> Giao diện bảng xếp hạng </em>
-    </p>
+<p align="center"> <img src="docs/images/dang nhap.png" alt="Ảnh 1" width="500"/> </p> <p align="center"> <em>Hình 1: Giao diện đăng nhập</em> </p>
+<p align="center"> <img src="docs/images/dang ky.png" alt="Ảnh 2" width="500"/> </p> <p align="center"> <em>Hình 2: Giao diện đăng ký</em> </p>
+<p align="center"> <img src="docs/images/giao dien.png" alt="Ảnh 3" width="500"/> </p> <p align="center"> <em>Hình 3: Giao diện Game Caro 3x3</em> </p>
+<p align="center"> <img src="docs/images/kq.png" alt="Ảnh 4" width="500"/> </p> <p align="center"> <em>Hình 4: Giao diện kết thúc game</em> </p>
+<p align="center"> <img src="docs/images/lsd.png" alt="Ảnh 5" width="500"/> </p> <p align="center"> <em>Hình 5: Giao diện lịch sử đấu</em> </p>
+<p align="center"> <img src="docs/images/bxh.png" alt="Ảnh 6" width="500"/> </p> <p align="center"> <em>Hình 6: Giao diện bảng xếp hạng</em> </p>
 ## 4. Cài đặt & chạy chương trình
 🔧 Bước 1: Chuẩn bị môi trường
 
